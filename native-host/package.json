@@ -1,0 +1,12 @@
+{
+  "name": "vibe-terminal-host",
+  "version": "1.0.0",
+  "description": "Backend local con node-pty para Vibe Terminal PiP",
+  "main": "host.js",
+  "scripts": {
+    "start": "node host.js"
+  },
+  "dependencies": {
+    "node-pty": "^1.0.0"
+  }
+}

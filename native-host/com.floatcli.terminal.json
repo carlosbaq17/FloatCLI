@@ -1,0 +1,9 @@
+{
+  "name": "com.floatcli.terminal",
+  "description": "FloatCLI Native Host",
+  "path": "C:\\Users\\carlos.baquero\\Documents\\extension_cmd\\vibe-terminal-workspace\\native-host\\host.bat",
+  "type": "stdio",
+  "allowed_origins": [
+    "chrome-extension://knkoaelddnffeppidielmdiongjijgfl/"
+  ]
+}

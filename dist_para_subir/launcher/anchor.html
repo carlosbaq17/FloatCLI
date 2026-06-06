@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vibe Terminal Anchor</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #ccc;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    #launch-btn {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.2s, transform 0.1s;
+      box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
+    }
+    #launch-btn:hover {
+      background-color: #0098ff;
+      transform: translateY(-2px);
+    }
+    #launch-btn:active {
+      transform: translateY(1px);
+    }
+    p {
+      font-size: 16px;
+      color: #999;
+      max-width: 450px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button id="launch-btn">💻 Lanzar Terminal PiP</button>
+    <p>Esta pestaña sirve como ancla segura para mantener viva la terminal flotante por encima del resto de aplicaciones sin problemas de seguridad CSP.<br><br><strong>No la cierres</strong> hasta que termines de usar la terminal.</p>
+  </div>
+  
+  <!-- Cargamos xterm y la app localmente en esta ventana ancla -->
+  <script src="../pip/libs/xterm.js"></script>
+  <script src="../pip/libs/xterm-addon-fit.js"></script>
+  <script src="../pip/app.js"></script>
+  <script src="anchor.js"></script>
+</body>
+</html>

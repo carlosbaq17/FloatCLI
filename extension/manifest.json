@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "FloatCLI",
+  "version": "1.0.0",
+  "description": "Terminal flotante nativa (siempre por encima) mediante API PiP y Pestañas Clásicas para Vibe Coding.",
+  "action": {},
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": [
+    "nativeMessaging"
+  ]
+}

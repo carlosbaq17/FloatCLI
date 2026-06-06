@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Vibe Terminal Anchor</title>
+  <style>
+    body {
+      background-color: #1e1e1e;
+      color: #ccc;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+    #launch-btn {
+      background-color: #007acc;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: background-color 0.2s, transform 0.1s;
+      box-shadow: 0 4px 15px rgba(0, 122, 204, 0.4);
+    }
+    #launch-btn:hover {
+      background-color: #0098ff;
+      transform: translateY(-2px);
+    }
+    #launch-btn:active {
+      transform: translateY(1px);
+    }
+    p {
+      font-size: 16px;
+      color: #999;
+      max-width: 400px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <button id="launch-btn">💻 Lanzar Terminal Flotante</button>
+    <p>Esta pestaña sirve como ancla segura para mantener viva la ventana flotante (PiP).<br><br><strong>No la cierres</strong> hasta que termines de usar la terminal.</p>
+  </div>
+  
+  <!-- Incluimos la misma lógica de inyección de PiP que usamos en páginas web normales -->
+  <script src="inject_pip.js"></script>
+  <!-- Nuestro script con el event listener -->
+  <script src="anchor.js"></script>
+</body>
+</html>
