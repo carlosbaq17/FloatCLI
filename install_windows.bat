@@ -23,7 +23,7 @@ echo   "description": "FloatCLI Native Host",
 echo   "path": "%BAT_PATH_ESCAPED%",
 echo   "type": "stdio",
 echo   "allowed_origins": [
-echo     "chrome-extension://knkoaelddnffeppidielmdiongjijgfl/"
+echo     "chrome-extension://dnpbbaapeddlnjhkegdelipmhopkhgnj/"
 echo   ]
 echo }
 ) > "%JSON_PATH%"

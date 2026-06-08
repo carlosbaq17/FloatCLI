@@ -1,5 +1,6 @@
 const fs = require('fs');
 const os = require('os');
+const path = require('path');
 const pty = require('node-pty');
 
 const shell = os.platform() === 'win32' ? 'powershell.exe' : 'bash';
