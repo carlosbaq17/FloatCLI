@@ -24,6 +24,30 @@ window.initVibeApp = function(pipWindow) {
   const tabsList = pipDoc.getElementById('tabs-list');
   const tabsContainer = pipDoc.getElementById('tabs-container');
   const addTabBtn = pipDoc.getElementById('add-tab-btn');
+  const maximizeBtn = pipDoc.getElementById('maximize-btn');
+
+  let isMaximized = false;
+  let preMaxState = { w: 800, h: 600, x: 0, y: 0 };
+
+  if (maximizeBtn) {
+    maximizeBtn.addEventListener('click', () => {
+      if (!isMaximized) {
+        preMaxState = {
+          w: pipWindow.outerWidth,
+          h: pipWindow.outerHeight,
+          x: pipWindow.screenX,
+          y: pipWindow.screenY
+        };
+        pipWindow.resizeTo(pipWindow.screen.availWidth, pipWindow.screen.availHeight);
+        pipWindow.moveTo(0, 0);
+        isMaximized = true;
+      } else {
+        pipWindow.resizeTo(preMaxState.w, preMaxState.h);
+        pipWindow.moveTo(preMaxState.x, preMaxState.y);
+        isMaximized = false;
+      }
+    });
+  }
 
   // 4. ACTUALIZACIÓN DEL RENOMBRADO (Doble Clic exclusivo a tabs)
   function handleRenameDblClick(el, promptText) {

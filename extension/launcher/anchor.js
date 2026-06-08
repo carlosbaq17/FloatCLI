@@ -18,12 +18,13 @@ document.getElementById('launch-btn').addEventListener('click', async () => {
       pipWindow.document.head.appendChild(style);
     }
 
-    // ELIMINADA PANTALLA COMPLETA (maximize-btn fuera)
+    // AÑADIDA PANTALLA COMPLETA
     pipWindow.document.body.innerHTML = `
       <div id="vibe-terminal-app">
         <div id="tab-bar">
           <div id="tabs-list"></div>
           <button id="add-tab-btn" title="Nueva Terminal">+</button>
+          <button id="maximize-btn" title="Maximizar/Restaurar">🗖</button>
         </div>
         <div id="tabs-container"></div>
       </div>
